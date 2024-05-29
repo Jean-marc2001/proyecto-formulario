@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estiloFormUsuario.css">
+    <title>Login Usuario</title>
+</head>
+
+<body id="imagenDia">
+    <form id="formLogin" action="/submit" method="post">
+        <fieldset>
+            <legend>Registro de Usuario</legend>
+            <div class="contenedor">
+                <div class="contenedor-inputs">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" required><br>
+                    <p id="mensajeErrorNombre" class="mensajError">Primera letra en mayúscula y al menos 5 caracteres.</p>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="contenedor-inputs">
+                    <label for="apellidos">Apellido:</label>
+                    <input type="text" name="apellido" id="apellido" required><br>
+                    <p id="mensajeErrorApellido" class="mensajError">Primera letra en mayúscula y al menos 5 caracteres.</p>
+                </div>
+            </div>
+                <div class="contenedor">
+                    <div class="contenedor-inputs">
+                        <label for="dni">DNI:</label>
+                        <input type="text" name="dni" id="dni" maxlength="9" required><br>
+                        <p id="mensajError" class="mensajError">DNI inválido. Por favor, verifica los datos ingresados.</p>
+                        
+                    </div>
+                </div>
+                <div class="contenedor">
+                    <div class="contenedor-inputs">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" required><br>
+                        <p id="mensajErrorEmail" class="mensajError">Email inválido. Por favor, verifica los datos ingresados.
+                    </div>
+                    </div>
+                </div>
+                <div class="contenedor">
+                    <div class="contenedor-inputs">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="number" name="telefono" id="telefono" required><br>
+                        <p id="mensajErrorTelef" class="mensajError">Debe de tener minimo 9 caracteres y empezar por 6 o 7 empezar por el prefijo 0034, +34 o 34 .</p>
+                    </div>
+                </div>
+                <div class="contenedor">
+                    <div class="contenedor-inputs">
+                        <label for="FechaNacimiento">Fecha de Nacimiento:</label>
+                        <input type="date" name="FechaNacimiento" id="FechaNacimiento" required><br>
+                    </div>
+                </div>
+                <div class="contenedor">
+                    <div class="contenedor-inputs">
+                        <label for="codPost">Código Postal:</label>
+                        <input type="number" name="codPost" id="codPost" required><br>
+                        <p id="mensajErrorCodPost" class="mensajError">5 caracteres y las 2 primeras cifras un numero entre el 01 al 52 y las 3 últimas cifras un número entre el 000 al 999.</p>
+                    </div>
+                </div>
+                <div class="contenedor">
+                    <div class="contenedor-inputs">
+                        <label for="password">Contraseña:</label>
+                        <input type="password" name="password" id="password" required><br>
+                        <p id="mensajErrorPass" class="mensajError">Tiene que tener entre 5 y 20 caracteres y almenos 1 letra mayúscula, 1 minúscula y 1 carácter especial.</p>
+                    </div>
+
+                </div>
+                <div class="contenedor">
+                    <div class="contenedor-inputs">
+                        <label for="Reppassword">Repetir Contraseña:</label>
+                        <input type="password" name="password" id="repPassword" required><br>
+                        <p id="mensajErrorRepPass" class="mensajError">Las contraseñas no coinciden.</p>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" id="enviar" value="Enviar">
+            <div class="desplegable">
+                <button class="despleOpciones">Opciones</button>
+                <div class="contenidoDesple">
+                    <input type="reset" id="reset" value="Reset">
+                    <button type="checkbox" id="modoNoche">Modo Noche</button>
+                    <a href="./ListaUsuarios.html" >Ir a la lista de usuarios</a>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    <script src="../js/login_usuario_programacion.js"></script>
+</body>
+</html>

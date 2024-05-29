@@ -1,0 +1,237 @@
+:root {
+    --background-color: rgb(171 61 18 / 33%);
+    --text-color: #f6f5ff;
+    --button-color: #8d2222;
+    --button-hover-color: #6a1b1b;
+    --background-color-noche: #2c3e5047;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+
+body {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    font-size: 16px;
+    color: white;
+    text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px  1px 0 #000,
+    1px  1px 0 #000;
+}
+
+#imagenDia{
+    background-image:url("../img/fondoDia_7680x4320.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#imagenNoche{
+    background-image:url("../img/fondoNoche_7680x4320.jpg");
+    background-size: 1366px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+legend{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-color);
+    text-align: center;
+    background-color: var(--button-color);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+fieldset{
+    width: 1250px;
+    position: absolute;
+    top: 150px;
+    right: 55px;
+    background: var(--background-color-noche);
+    margin: 0px;
+    border: 2px solid var(--button-color);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+input{
+    width: 200px;
+    position: absolute;
+    top: 30px;
+    left: 22px;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid #421510;
+    margin-bottom: 20px;
+    align-self: flex-end;
+    flex: 1;
+
+}
+
+#botonBuscar{
+    width: 80px;
+    position: absolute;
+    top: 30px;
+    left: 230px;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid #421510;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+#botonBuscar:hover {
+    background-color: var(--button-hover-color);
+}
+#botonAñadirUsu{
+    width: 200px;
+    position: absolute;
+    top: 130px;
+    left: 38px;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid #421510;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    font-weight: bold;
+    cursor: pointer;
+
+
+}
+#tabla{
+    width: 1250px;
+    margin: 0px;
+    padding: 10px;
+}
+
+th{
+    font-size: 20px;
+    color: var(--text-color);
+    font-weight: bold;
+    font-family: monospace;
+}
+
+td{
+    color: var(--text-color);
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border: 2px solid var(--button-color);
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+
+#botonAñadirUsu:hover {
+    background-color: var(--button-hover-color);
+}
+
+#modoNoche {
+    width: 80px;
+    background-color: var(--button-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#modoNoche:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+}
+
+.despleOpciones {
+    background-color: var(--button-color);
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    position: absolute;
+    right: 56px;
+    top: 30px;
+}
+
+.contenidoDesple {
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+    right: 60px;
+    top: 69px;
+}
+
+.contenidoDesple input, .contenidoDesple button {
+    background-color: var(--button-color);
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+.contenidoDesple input:hover, .contenidoDesple button:hover {
+    background-color: var(--button-hover-color);
+}
+
+.desplegable:hover .contenidoDesple {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+    }
+
+    .contenedor-inputs {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor {
+        flex-direction: column;
+    }
+
+    .contenedor-inputs {
+        flex-direction: column;
+        align-items: center;
+    }
+}

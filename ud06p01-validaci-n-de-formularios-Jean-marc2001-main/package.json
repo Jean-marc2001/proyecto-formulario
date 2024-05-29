@@ -1,0 +1,24 @@
+{
+  "name": "validador-gestion-usuarios",
+  "version": "1.0.0",
+  "description": "Scripting del cliente de la aplicación de programación Aplicación para gestión de Usuarios",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amiguetes/validador-gestion-usuarios.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amiguetes/validador-gestion-usuarios/issues"
+  },
+  "homepage": "https://github.com/amiguetes/validador-gestion-usuarios#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}

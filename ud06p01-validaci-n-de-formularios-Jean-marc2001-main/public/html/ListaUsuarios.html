@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuarios</title>
+    <link rel="stylesheet" href="../css/estiloListaUsuarios.css">
+</head>
+<body id="imagenDia">
+    <div>
+        <input type="text" placeholder="Buscar">
+        <button id="botonBuscar">Buscar</button>
+    </div>
+    <button id="botonAñadirUsu">Añadir un nuevo usuario</button>
+        <fieldset>
+            <legend>Lista de Usuarios</legend>
+            <table id="tabla">
+                <thead>
+                    <tr>
+                        <th>Nombre Completo</th>
+                        <th>Email</th>
+                        <th>Fecha de nacimiento</th>
+                        <th>Código Postal</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ada Lovelace</td>
+                        <td>ada@test.es</td>
+                        <td>10 de Diciembre, 1815</td>
+                        <td>101815</td>
+                        <td><a href="./paginas detalles/Usuario_Ada_Lovelace.html">Ver detalle</a> / <a href="../html/modificar usuarios/mod_Ada_Lovelace.html">Editar</a> / <a href="#">Borrar</a></td>
+                    </tr>
+                    <tr>
+                        <td>Crace Hopper</td>
+                        <td>grace@test.es</td>
+                        <td>9 de Diciembre, 1906</td>
+                        <td>91906</td>
+                        <td><a href="./paginas detalles/Usuario_Crace_Hopper.html">Ver detalle</a> / <a href="../html/modificar usuarios/mod_Crace_Hopper.html">Editar</a> / <a href="#">Borrar</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+        <div class="desplegable">
+            <button class="despleOpciones">Opciones</button>
+            <div class="contenidoDesple">
+                <button type="checkbox" id="modoNoche">Modo Noche</button>
+            </div>
+        </div>
+    <script>
+        document.getElementById("modoNoche").addEventListener("click", function() {
+            if (document.body.id === 'imagenDia') {
+                document.body.id = 'imagenNoche';
+                this.textContent = 'Modo Día';
+                document.documentElement.style.setProperty('--background-color', '#2c3e50');
+                document.documentElement.style.setProperty('--text-color', '#ecf0f1');
+                document.documentElement.style.setProperty('--button-color', '#195983');
+                document.documentElement.style.setProperty('--button-hover-color', '#1c6692');
+            } else {
+                document.body.id = 'imagenDia';
+                this.textContent = 'Modo Noche';
+                document.documentElement.style.setProperty('--background-color', 'rgb(171 61 18 / 33%)');
+                document.documentElement.style.setProperty('--text-color', '#f6f5ff');
+                document.documentElement.style.setProperty('--button-color', '#8d2222');
+                document.documentElement.style.setProperty('--button-hover-color', '#6a1b1b');
+            }
+            
+        });
+
+        document.querySelector('.despleOpciones').addEventListener('mouseenter', function() {
+            document.querySelector('.contenidoDesple').style.display = 'block';
+        });
+
+        document.querySelector('.desplegable').addEventListener('mouseleave', function() {
+            document.querySelector('.contenidoDesple').style.display = 'none';
+        });
+
+    </script>
+</body>
+</html

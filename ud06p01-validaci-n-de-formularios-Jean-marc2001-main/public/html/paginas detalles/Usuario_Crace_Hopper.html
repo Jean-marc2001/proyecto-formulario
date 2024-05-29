@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/paginas detalles estilo/estilo_Crace_Hopper.css">
+    <title>Crace Hopper</title>
+</head>
+<body id="imagenDia">
+    <form>
+        <fieldset>
+            <legend>Crace Hopper</legend>
+            <div class="contenedor">
+                <div class="contenedor-inputs">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" value="Crace" readonly><br>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="contenedor-inputs">
+                    <label for="apellidos">Apellido:</label>
+                    <input type="text" name="apellido" id="apellido" value="Hopper" readonly><br>
+                </div>
+            </div>
+                <div class="contenedor">
+                    <div class="contenedor-inputs">
+                        <label for="dni">DNI:</label>
+                        <input type="text" name="dni" id="dni" value="000000X" readonly><br>
+                    </div>
+                </div>
+                <div class="contenedor">
+                    <div class="contenedor-inputs">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" value="crace@hopper.com" readonly><br>
+                    </div>
+                </div>
+                <div class="contenedor">
+                    <div class="contenedor-inputs">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="number" name="telefono" id="telefono" value="683820902" readonly><br>
+                    </div>
+                </div>
+                <div class="contenedor">
+                    <div class="contenedor-inputs">
+                        <label for="FechaNacimiento">Fecha de Nacimiento:</label>
+                        <input type="date" name="FechaNacimiento" id="FechaNacimiento" value="15/11/2023" readonly><br>
+                    </div>
+                </div>
+                <div class="contenedor">
+                    <div class="contenedor-inputs">
+                        <label for="codPost">Código Postal:</label>
+                        <input type="number" name="codPost" id="codPost" value="00002" readonly><br>
+                    </div>
+                </div>
+            </div>
+            <div class="desplegable">
+                <button class="despleOpciones">Opciones</button>
+                <div class="contenidoDesple">
+                    <button type="checkbox" id="modoNoche">Modo Noche</button>
+                    <a href="../../html/ListaUsuarios.html" >Ir a la lista de usuarios</a>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    <script>
+        document.getElementById("modoNoche").addEventListener("click", function() {
+            if (document.body.id === 'imagenDia') {
+                document.body.id = 'imagenNoche';
+                this.textContent = 'Modo Día';
+                document.documentElement.style.setProperty('--background-color', '#2c3e50');
+                document.documentElement.style.setProperty('--text-color', '#ecf0f1');
+                document.documentElement.style.setProperty('--button-color', '#2980b9');
+                document.documentElement.style.setProperty('--button-hover-color', '#1c6692');
+            } else {
+                document.body.id = 'imagenDia';
+                this.textContent = 'Modo Noche';
+                document.documentElement.style.setProperty('--background-color', 'rgb(171 61 18 / 33%)');
+                document.documentElement.style.setProperty('--text-color', '#f6f5ff');
+                document.documentElement.style.setProperty('--button-color', '#8d2222');
+                document.documentElement.style.setProperty('--button-hover-color', '#6a1b1b');
+            }
+            
+        });
+
+        document.querySelector('.despleOpciones').addEventListener('mouseenter', function() {
+            document.querySelector('.contenidoDesple').style.display = 'block';
+        });
+
+        document.querySelector('.desplegable').addEventListener('mouseleave', function() {
+            document.querySelector('.contenidoDesple').style.display = 'none';
+        });
+
+    </script>
+</body>
+</html>
